@@ -1,0 +1,8 @@
+idle_fg      = "#98969b"
+info_fg      = "#f5c2e7"
+good_fg      = "#50fa7b"
+warning_fg   = "#ea76cb"
+critical_fg  = "#d20f39"
+separator    = " "
+separator_bg = "auto"
+separator_fg = "auto"

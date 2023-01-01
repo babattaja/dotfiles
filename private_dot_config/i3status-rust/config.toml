@@ -1,0 +1,53 @@
+theme = "ctp_mocha"
+icons = "awesome6"
+
+[[block]]
+block = "music"
+player = "spotify"
+buttons = ["play", "next"]
+max_width = 40
+dynamic_width = true
+hide_when_empty = false
+
+[[block]]
+icons_format = " "
+block = "disk_space"
+path = "/"
+alias = "/"
+info_type = "available"
+unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+
+[[block]]
+icons_format = " "
+block = "memory"
+display_type = "memory"
+format_mem = "{mem_used_percents}"
+format_swap = "{swap_used_percents}" 
+warning_mem = 40
+critical_mem = 80
+
+[[block]]
+icons_format = " "
+block = "cpu"
+interval = 5
+
+#[[block]]
+#icons_format = "LOAD "
+#block = "load"
+#interval = 5
+#format = "{1m}"
+
+[[block]]
+icons_format = " "
+block = "sound"
+max_vol = 100
+on_click = "pavucontrol"
+
+[[block]]
+icons_format = " "
+block = "time"
+interval = 1
+format = "%a %d/%m %R"

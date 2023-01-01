@@ -188,14 +188,14 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   position top
-  status_command i3status -c /home/baba/.config/i3/i3status.conf
+  status_command i3status-rs
 
   colors {
     background #11111b
-    statusline #cba6f7
+    statusline #b0787f
     separator #cdd6f4
                        #border, background, text
-    focused_workspace  #f38ba8 #f38ba8 #11111b
+    focused_workspace  #f5c2e7 #f5c2e7 #11111b
     active_workspace   #11111b #11111b #11111b
     inactive_workspace #181825 #181825 #cdd6f4
     urgent_workspace   #cdd6f4 #cdd6f4 #11111b
@@ -203,25 +203,34 @@ bar {
 }
 
 # Keyboard
+
 exec_always setxkbmap fi
 
 # Wallpaper
 
-exec nitrogen --restore
+exec --no-startup-id nitrogen --restore
 
 # Lockscreen
+
 bindsym $mod+x exec i3lock -c 000000
 
 # Gaps
+
 gaps inner 5
 
 # Picom
+
 exec picom --no-fading-openclose
 
 # You can also use any non-zero value if you'd like to have a border
+
 default_border pixel 0
 
+# Udiskie Startup
+
 exec --no-startup-id udiskie &
+
+# Screen locktime etc
 
 exec xset s 1800
 
